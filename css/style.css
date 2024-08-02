@@ -1,0 +1,1059 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Playfair Display', 'Playfair Display SC', sans-serif;
+    line-height: 1.7;
+}
+
+/* ################# FIXME: utility classes ############### */
+
+a {
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+p,
+li {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 0.5em;
+}
+
+.lg-heading {
+    font-size: 4.7em;
+    font-weight: 600;
+}
+
+.lg-middle {
+    font-size: 4em;
+    font-weight: 600;
+}
+
+.lg-md {
+    font-size: 2.6em;
+    font-weight: 600;
+}
+
+.lg-small {
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.md-text {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.sm-text {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 3em;
+    font-weight: 500;
+    font-size: 1.8em;
+    margin: 0.5em 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+    background-color: #bb5a3a;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background-color: #000000d1;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #bb5a3a;
+}
+
+/* ############## header styling ################## */
+
+.header {
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.wrapper {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/* .sticky + .content {
+    padding-top: 60px;
+  } */
+
+
+/* ###############cTODO: Search Styling ################# */
+
+.search input {
+    padding: 1rem 0rem 1rem 0rem;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    margin-top: 1rem;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.search input::placeholder {
+    color: #ffffff;
+    /* Change this to the color you want for the placeholder */
+}
+
+.search button {
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    background-color: #000000;
+    color: #979797;
+}
+
+.search input:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+.search button:hover {
+    color: #ffffff;
+}
+
+.search {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+/* ###############cTODO: Social-media Styling ################# */
+
+.social-media-links i {
+    padding: 1.5rem;
+    color: #ffffff;
+}
+
+.icon {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ############### TODO:Logo Styling ################# */
+/*  navbar styling for desktop  mode*/
+.navbar input[type="checkbox"],
+.hamburger-lines {
+    display: none;
+}
+
+.navbar {
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+
+.logo {
+    float: left;
+    width: 30%;
+    text-align: left;
+}
+
+.navbar .logo a {
+    font-size: 1.74em;
+    font-weight: 600;
+    color: #000000;
+}
+
+.navbar .menu-items {
+    text-align: right;
+}
+
+.navbar .menu-items li {
+    display: inline-block;
+    padding: 1rem;
+}
+
+.navbar .menu-items li a {
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+.navbar .menu-items li a:hover {
+    color: #bb5a3a;
+}
+
+.navbar .menu-items li a:active {
+    color: #bb5a3a;
+}
+
+.menu-items {
+    float: right;
+    width: 70%;
+    text-align: right;
+}
+
+/* Applying transparency using :not(:hover) */
+.navbar:not(:hover) {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.navbar::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ############## TODO: Image&description Box styling ################## */
+
+.row .img-box img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.img-box1,
+.img-box2,
+.img-box3 {
+    float: left;
+    width: 33.333333%;
+    position: relative;
+}
+
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.text-box {
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: -5rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    width: 90%;
+}
+
+.row-1 {
+    margin-top: 10rem;
+    /* padding: 2rem; */
+}
+
+.col-1 {
+    float: left;
+    width: 60%;
+    background-color: transparent;
+}
+
+.row-1::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.row-col-1 .row-img-box img {
+    display: block;
+    width: 100%;
+    /* height: 50rem; */
+    object-fit: cover;
+}
+
+.row-img-box {
+    float: left;
+    width: 50%;
+}
+
+.row-text-box {
+    float: right;
+    width: 50%;
+    padding: 3.6rem;
+}
+
+.row-col-1 {
+    width: 80%;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 4rem;
+}
+
+.row-col-1::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.heading:hover {
+    color: #bb5a3a;
+}
+
+.para:hover {
+    color: #bb5a3a;
+}
+
+.small {
+    padding-bottom: 1.2rem;
+}
+
+/* ############## TODO: Email Subscription Box styling ################## */
+
+.col-2 {
+    height: 125rem;
+    background-color: #FEF2F0;
+    float: left;
+    width: 40%;
+    position: relative;
+    z-index: 1;
+}
+
+.box-email {
+    background-color: #bb5a3a;
+    padding: 5rem;
+    width: 70%;
+    margin: 0 auto;
+    height: 37.5rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-email h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.box-email label {
+    display: inline-block;
+    font-size: 1.6em;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box-email label::after {
+    content: '*';
+    color: #ffffff;
+    padding-left: 0.5rem;
+}
+
+.box-email input[type="email"] {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    font-size: 1.5em;
+    margin: 0 0 2rem 0;
+}
+
+.box-email input[type="email"]:hover {
+    border-bottom: 2px solid #000000;
+}
+
+input[type="submit"] {
+    display: block;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+}
+
+.box-bottom {
+    position: absolute;
+    text-align: center;
+    top: 38%;
+    /* left: 50%;
+    transform: translate(-50%, -0%); */
+    margin: 5rem 10rem 2rem 10rem;
+}
+
+.instagram-feed img {
+    display: block;
+    float: left;
+    width: 49%;
+    padding: 0.1rem;
+    height: 13.75rem;
+    object-fit: cover;
+    object-position: center;
+    margin: 0.1rem;
+}
+
+.img {
+    position: relative;
+}
+
+.img-content p {
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.img-content {
+    position: absolute;
+    top: 20%;
+    left: -15%;
+    transform: translate(50%, 50%);
+    opacity: 1;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.img:hover .img-content {
+    opacity: 1;
+}
+
+.img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 49%;
+    height: 13.75rem;
+    background-color: rgba(0, 0, 0, 0.703);
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.img:hover::after {
+    opacity: 1;
+}
+
+.box-bottom::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col-2 .social-media-links {
+    position: absolute;
+    text-align: center;
+    top: 83%;
+    left: 20%;
+    padding: 1rem;
+}
+
+.col-2 .social-media-links i {
+    color: #000000;
+}
+
+/* ############# FIXME: Home-bottom Styling ################### */
+
+.home-bottom {
+    background-color: #FEF2F0;
+    padding: 3rem;
+    margin-top: 10rem;
+    position: relative;
+    height: 46.875rem;
+}
+
+.home-bottom h2 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.home-page-bottom {
+    width: 50%;
+    margin: 0.1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-page-bottom label {
+    display: inline-block;
+    font-size: 1.6em;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home-page-bottom input[type="text"],
+.home-page-bottom input[type="email"] {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    font-size: 1.5em;
+    margin: 0 0 4rem 0;
+}
+
+.home-page-bottom input[type="text"]:hover,
+.home-page-bottom input[type="email"]:hover {
+    border-bottom: 2px solid #bb5a3a;
+}
+
+.home-page-bottom input[type="text"]:focus,
+.home-page-bottom input[type="email"]:focus {
+    border-bottom: 2px solid #000000;
+}
+
+input[type="email"]:focus {
+    border: 2px solid #000000;
+    background-color: #0000006c;
+
+}
+
+.left {
+    float: left;
+    width: 50%;
+    padding: 0 5rem;
+}
+
+.right {
+    float: right;
+    width: 50%;
+    padding: 0 5rem;
+}
+
+.home-bottom::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ############# TODO: Footer Styling ################### */
+footer {
+    background-color: #bb5a3a;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    padding: 2rem;
+}
+
+/* ################ TODO: media queries ################ */
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .btn {
+        margin: 2em 7em;
+    }
+
+    /* ###############cTODO: Search Styling ################# */
+
+    .search input {
+        font-size: 1.3em;
+    }
+
+    .search button {
+        font-size: 1.3em;
+    }
+
+
+    /* ###############cTODO: Social-media Styling ################# */
+    .social-media-links {
+        margin: 0rem 2rem;
+    }
+
+    .social-media-links i {
+        padding: 1.2rem;
+    }
+
+    .row .img-box img {
+        display: block;
+        width: 100%;
+        height: 62.5rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .img-box1,
+    .img-box3 {
+        display: none;
+    }
+
+    .img-box2 {
+        float: none;
+        width: 100%;
+        position: relative;
+    }
+
+    .text-box {
+        margin-bottom: -10rem;
+    }
+
+    .col-1 {
+        float: none;
+        width: 100%;
+    }
+
+    .row-col-1 .row-img-box img {
+        display: block;
+        width: 100%;
+        height: 31.25rem;
+        object-fit: cover;
+    }
+
+    .row-img-box {
+        float: none;
+        width: 100%;
+    }
+
+    .row-text-box {
+        float: none;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .row-col-1 {
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        margin: 5rem;
+    }
+
+    /* ############## TODO: Email Subscription Box styling ################## */
+
+    .col-2 {
+        height: 125rem;
+        background-color: #FEF2F0;
+        float: none;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .box-email {
+        width: 90%;
+        top: 18%;
+    }
+
+    .box-bottom {
+        position: absolute;
+        text-align: center;
+        top: 30%;
+        left: 30%;
+        transform: translate(-50%, -0%);
+        margin: 5rem 10rem 2rem 10rem;
+    }
+
+    .instagram-feed img {
+        display: none;
+    }
+
+    .instagram-feed .show {
+        display: block;
+        width: 100%;
+        height: 15.62rem;
+        object-fit: cover;
+        margin: 1.56rem;
+    }
+
+    .col-2 .social-media-links {
+        position: absolute;
+        text-align: center;
+        top: 95%;
+        left: 20%;
+        padding: 2rem;
+    }
+
+    .col-2 .social-media-links i {
+        font-size: 2em;
+    }
+
+    .navbar{
+        opacity: 0.95;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* For screens larger than 768px */
+    /* utility  classes */
+
+    .row-col-1 {
+        width: 95%;
+    }
+
+    .lg-middle {
+        font-size: 3.4em;
+    }
+
+    .box-email {
+        width: 100%;
+        height: 31.25rem;
+    }
+
+    .box-bottom {
+        top: 32%;
+        width: 100%;
+        margin: 10rem 0rem 5rem 0rem;
+    }
+
+    .instagram-feed img {
+        width: 49.3%;
+        height: 15rem;
+    }
+
+    .col-2 .social-media-links {
+        left: 10%;
+        padding: 0.5rem;
+    }
+
+    .home-bottom {
+        height: 60rem;
+        margin-top: 6rem;
+    }
+
+
+    .home-bottom h2 {
+        text-align: center;
+        padding: 0rem;
+    }
+
+    .home-page-bottom {
+        width: 100%;
+    }
+
+    .left {
+        float: none;
+        width: 100%;
+    }
+
+    .right {
+        float: none;
+        width: 100%;
+    }
+
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container .logo {
+        float: left;
+        width: 30%;
+        text-align: left;
+    }
+
+    .navbar-container .menu-items {
+        float: none;
+    }
+
+    .wrapper {
+        position: absolute;
+    }
+
+    .navbar-container input[type='checkbox'],
+    .navbar-container.hamburger-lines {
+        display: block;
+        float: right;
+        width: 30%;
+    }
+
+    .navbar::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .navbar-container {
+        display: block;
+        position: relative;
+    }
+   
+    .navbar-container input[type='checkbox'] {
+        display: block;
+        position: absolute;
+        height: 32px;
+        width: 40px;
+        top: 10px;
+        right: 30px;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .navbar-container .hamburger-lines {
+        display: block;
+        position: absolute;
+        height: 32px;
+        width: 40px;
+        top: 10px;
+        right: 30px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #333333;
+    }
+
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar-container .menu-items {
+        padding-top: 100px;
+        background-color: #FCDED9;
+        height: 100vh;
+        max-width: 300px;
+        transform: translateX(70%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+    }
+    
+    .navbar-container .menu-items li {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .navbar-container input[type='checkbox']:checked~.menu-items {
+        transform: translateX(200%);
+    }
+
+    .navbar-container input[type='checkbox']:checked~.hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type='checkbox']:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type='checkbox']:checked~.hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+   
+}
+
+@media (max-width: 576px) {
+
+    .navbar .logo a {
+        font-size: 1.3em;
+    }
+
+    .lg-middle {
+        font-size: 2.7em;
+    }
+
+    .text-box {
+        width: 200%;
+        z-index: 2;
+    }
+
+    .box-email {
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .box-bottom {
+        top: 22%;
+        width: 100%;
+        margin: 10rem 0rem 5rem 0rem;
+    }
+
+    .col-2 .social-media-links {
+        top: 94%;
+    }
+
+    .col-2 .social-media-links i {
+        font-size: 1.3em;
+    }
+
+    .navbar-container .menu-items {
+        padding-top: 100px;
+        background-color: #FCDED9;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(100%, -150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        padding-left: -50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+    }
+    
+    .navbar-container .menu-items li {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .navbar-container input[type='checkbox']:checked~.menu-items {
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type='checkbox']:checked~.hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type='checkbox']:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type='checkbox']:checked~.hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+}
+
+
+
+/* ################  landscape mode ################ */
+
+@media (orientation: landscape) and (max-height: 500px){
+    html {
+        font-size: 50%;
+    }
+
+    .text-box {
+        width: 200%;
+        z-index: 2;
+    }
+
+    .box-bottom {
+        top: 20%;
+        width: 100%;
+        margin: 10rem 0rem 5rem 0rem;
+    }
+
+    .box-email {
+        padding: 3rem;
+        width: 90%;
+        height: auto;
+        top: 15%;
+    }
+
+    .box-email h2 {
+        font-size: 1.8em;
+    }
+
+    .box-email label {
+        font-size: 1.4em;
+    }
+
+    .box-email input[type="email"] {
+        font-size: 1.2em;
+    }
+
+    .home-bottom {
+        height: 60rem;
+        padding: 2rem;
+    }
+
+    .home-page-bottom label {
+        font-size: 1.4em;
+    }
+
+    .home-page-bottom input[type="text"],
+    .home-page-bottom input[type="email"] {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 1.2em;
+        padding: 1.5rem;
+    }
+
+    .row-1 {
+        margin-top: 5rem;
+    }
+
+    .col-1 {
+        float: none;
+        width: 100%;
+    }
+
+    .row-col-1 .row-img-box img {
+        height: 50vh;
+    }
+
+    .row-col-1 {
+        width: 100%;
+    }
+
+    .col-2 {
+        float: none;
+        width: 100%;
+        height: 90rem;
+    }
+
+    .instagram-feed img {
+        width: 49%;
+        height: 30vh;
+    }
+
+    .col-2 .social-media-links {
+        top: 90%;
+    }
+}
